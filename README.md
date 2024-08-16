@@ -1,2 +1,2 @@
 # SweCam
-Tox24 Challenge
+Our submission for the Tox24 Challenge.
