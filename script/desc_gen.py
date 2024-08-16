@@ -1,5 +1,6 @@
 """
 Script for the Tox24 challenge.
+https://github.com/FredrikSvenssonUK/SweCam/blob/main/LICENSE
 
 Generate FPs and RDKit descriptors for the input compounds.
 Input file is as provided from the challnge webpage (separate train and test csv files).
@@ -10,6 +11,8 @@ Compounds will also be numbered as an ID.
 
 Only compounds that pass all the descriptor generators will be written to
 the result files.
+
+Based on RDKit https://github.com/rdkit/rdkit
 """
 
 
@@ -29,8 +32,9 @@ from molvs import Standardizer
 
 
 ### Config ### 
-train_path = Path("tox24_challenge_train.csv")
-test_path = Path("tox24_challenge_test.csv")
+train_path = Path("data/tox24_challenge_train.csv")
+test_path = Path("data/tox24_challenge_test.csv")
+leaderboard_path = Path("data/tox24_challenge_leaderboard.csv")
 
 # Set up what RDKit descriptors to calculate
 desc_list = ['Chi0','Chi0n','Chi0v','Chi1',\
@@ -58,7 +62,7 @@ desc_list = ['Chi0','Chi0n','Chi0v','Chi1',\
 
 if __name__ == "__main__":
     
-    infile_list = [train_path, test_path]
+    infile_list = [test_path, train_path, leaderboard_path]
     
     for file_index, infile in enumerate(infile_list):
         
@@ -105,10 +109,10 @@ if __name__ == "__main__":
                 
                 # Check if processing the train or test file to determine how to handle the y values.
                 if file_index == 0:
-                    smiles, value = line.split(",")
-                elif file_index == 1:
                     smiles = line
                     value = 'y'
+                else:
+                    smiles, value = line.split(",")
                 ID = count+1
                 
                 mol = Chem.MolFromSmiles(smiles)

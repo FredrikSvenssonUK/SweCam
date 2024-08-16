@@ -1,4 +1,7 @@
 """
+Script for the Tox21 challenge.
+https://github.com/FredrikSvenssonUK/SweCam/blob/main/LICENSE
+
 Take the output from a predictor and format for submission.
 
 Missing values are inserted as the mean prediction of the total dataset.

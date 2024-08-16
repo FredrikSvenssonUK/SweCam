@@ -1,4 +1,7 @@
 """
+Script for the Tox21 challenge.
+https://github.com/FredrikSvenssonUK/SweCam/blob/main/LICENSE
+
 Scale data and save scaler.
 
 Using MinMaxScaler.
@@ -17,14 +20,16 @@ import pandas as pd
 
 
 ### Config ###
-train_file = "tox24_challenge_train_mordred.csv"
-test_file = "tox24_challenge_test_mordred.csv"
+train_file = "data/tox24_challenge_train_mordred.csv"
+test_file = "data/tox24_challenge_test_mordred.csv"
+leaderboard_file = "data/tox24_challenge_leaderboard_mordred.csv"
 delim = "\t"
 setheader = None
 
 scaler_out = "scaler"
-train_file_out = "tox24_challenge_train_mordred_scaled.csv"
-test_file_out = "tox24_challenge_test_mordred_scaled.csv"
+train_file_out = "data/tox24_challenge_train_mordred_scaled.csv"
+test_file_out = "data/tox24_challenge_test_mordred_scaled.csv"
+leaderboard_file_out = "data/tox24_challenge_leaderboard_mordred_scaled.csv"
 
 
 #### Main ####

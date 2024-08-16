@@ -1,10 +1,13 @@
 """
 LGBM predictor for the Tox24 challenge.
+https://github.com/FredrikSvenssonUK/SweCam/blob/main/LICENSE
 
 LightGBM: An Effective and Scalable Algorithm for Prediction of Chemical Toxicity–Application to the Tox21 and Mutagenicity Data Sets
 Jin Zhang, Daniel Mucs, Ulf Norinder, and Fredrik Svensson
 Journal of Chemical Information and Modeling 2019 59 (10), 4150-4158
-DOI: 10.1021/acs.jcim.9b00633 
+DOI: 10.1021/acs.jcim.9b00633
+
+https://github.com/microsoft/LightGBM
 """
 
 
