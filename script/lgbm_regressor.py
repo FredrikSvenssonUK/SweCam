@@ -31,7 +31,6 @@ usage = "usage: %prog -i inputfile [optional args]"
 parser = OptionParser(usage=usage)
 parser.add_option("-i","--in", dest="infile",help="Training set file. (required)", metavar ="file")
 parser.add_option("-t","--test", dest="test",help="Test set file. (optional)", metavar ="file")
-parser.add_option("-n","--numtrees", dest="numtrees",help="Number of trees.",default=100)
 parser.add_option("-d","--delim", dest="delim",help="Delimiter in input",default='\t')
 parser.add_option("-f","--header", dest="header",help="Set to row of header in the infile or None.",default=None)
 (options,args) = parser.parse_args()
