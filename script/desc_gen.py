@@ -3,7 +3,7 @@ Script for the Tox24 challenge.
 https://github.com/FredrikSvenssonUK/SweCam/blob/main/LICENSE
 
 Generate FPs and RDKit descriptors for the input compounds.
-Input file is as provided from the challnge webpage (separate train and test csv files).
+Input file is as provided from the challenge webpage (separate train and test csv files).
 
 Before descriptor generation the script will desalt and standardize the 
 structures. Standardized smiles will also be saved to a file.
