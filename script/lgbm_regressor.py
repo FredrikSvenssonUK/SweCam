@@ -45,16 +45,7 @@ folds = 10 # number of cross validation folds
 
 def lgbm_model():
     
-    param_dict = {'learning_rate': 0.024991140250116773,
-                  'n_estimators': 350,
-                  'lambda_l1': 6.992349516150798e-05,
-                  'lambda_l2': 1.3780313659288333e-07,
-                  'num_leaves': 10,
-                  'feature_fraction': 0.7940863771616778,
-                  'bagging_fraction': 0.8344564803406989,
-                  'bagging_freq': 3,
-                  'min_child_samples': 30
-                  }
+    param_dict = {'learning_rate': 0.005117712512654444, 'n_estimators': 900, 'lambda_l1': 6.152805124789538e-08, 'lambda_l2': 6.580329064493613e-05, 'num_leaves': 142, 'feature_fraction': 0.9338378651874101, 'bagging_fraction': 0.5617248336617564, 'bagging_freq': 5, 'min_child_samples': 10}
 
     model = lgb.LGBMRegressor(objective = 'regression',
                               verbosity=-1,
